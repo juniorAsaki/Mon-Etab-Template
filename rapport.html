@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="fontawesome/js/all.js"></script>
+    <script src="js/index.js"></script>
+    <title>Rapport page</title>
+</head>
+<body>
+    <div class="containerPrincipal">
+        <div class="containerGauche">
+            <div class="up">
+                <h1><img id="iconsEtab" src="icons/school-solid.svg" alt="">Mon Etab</h1>
+                <div class="separateur"></div>
+                <hr>
+                <ul>
+                    <li onclick="goToDashbord()" class="menuHorizontal"><img src="fontawesome/svgs/solid/square-poll-horizontal.svg" alt="">Tableau de bord</li>
+                    <li onclick="goToEleve()" class="menuHorizontal"><img src="fontawesome/svgs/solid/user-large-slash.svg" alt="">Eleves</li>
+                    <li onclick="goToProfesseur()" class="menuHorizontal"><img src="fontawesome/svgs/solid/person-chalkboard.svg" alt="">Professeurs</li>
+                    <li onclick="goToUtilisateur()" class="menuHorizontal"><img src="fontawesome/svgs/solid/user.svg" alt="">Utilisateurs</li>
+                    <li onclick="goToRapport()" class="menuHorizontal"><img src="fontawesome/svgs/solid/chart-pie.svg" alt="">Rapport</li>
+                </ul>
+            </div>
+            <div class="separateur" id="separateur"></div>
+            <ul>
+                <li onclick="goToLogin()" id="logout"><img src="fontawesome/svgs/solid/right-from-bracket.svg" alt="">Déconnexion</li>
+            </ul>
+        </div>
+        <div class="containerDroit">
+            <div class="enTete">
+                <div></div>
+                <ul style="float: inline-end;">
+                    <li onclick="goToDashbord()"><img src="fontawesome/svgs/solid/backward.svg" alt="">Retour</li>
+                </ul>
+            </div>
+            <form action="">
+                <h2 style="margin: 10px;">Rapport</h2>
+                <div class="form-group">
+                    <select name="classe" id="classe">
+                        <option value="">Sélectionner une option</option>
+                        <option value="classe1">Liste des eleves</option>
+                        <option value="classe2">Listes des professeurs</option>
+                        <option value="classe3">Liste des utilisateurs</option>
+                    </select>
+                </div>
+                <div class="form-group group-button" style="margin: -5px;margin-top: 10px;">
+                    <button id="annuler">Generer format PDF</button>
+                    <button id="enregistrer">Generer format Excel</button>
+                </div>
+            </form>
+          
+        </div>
+    </div>
+</body>
+</html>
